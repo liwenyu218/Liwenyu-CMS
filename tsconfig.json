@@ -1,0 +1,26 @@
+{
+  // 继承自web.json的文件
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  // 指定哪些文件需要进行ts编译
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "auto-imports.d.ts",
+    "components.d.ts"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // vscode编写的时候提示
+      "@/*": ["./src/*"]
+    }
+    // "types": ["element-plus/global"] // 全局引入时给予组件更好的类型提示
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
+}
