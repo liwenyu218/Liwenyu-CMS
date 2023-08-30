@@ -20,9 +20,9 @@ const accountRules: FormRules = {
   name: [
     { required: true, message: '请输入账号信息', trigger: 'blur' },
     {
-      pattern: /^[a-z0-9]{6,20}$/,
-      message: '必须为6~20个数字或字母组成',
-      trigger: 'blur'
+      pattern: /^[a-z0-9]{4,20}$/,
+      message: '必须为4~20个数字或字母组成',
+      trigger: 'blur' //失去焦点时才校验,设置为change则每次修改时都会校验
     }
   ],
   password: [
@@ -69,14 +69,7 @@ defineExpose({
 
 <template>
   <div class="panel-account">
-    <el-form
-      :model="account"
-      label-width="60px"
-      :rules="accountRules"
-      size="large"
-      status-icon
-      ref="formRef"
-    >
+    <el-form :model="account" label-width="60px" :rules="accountRules" size="large" status-icon ref="formRef">
       <el-form-item label="账号" prop="name">
         <el-input v-model="account.name" />
       </el-form-item>
@@ -87,8 +80,4 @@ defineExpose({
   </div>
 </template>
 
-<style lang="less" scoped>
-.panel-account {
-  color: red;
-}
-</style>
+<style lang="less" scoped></style>
