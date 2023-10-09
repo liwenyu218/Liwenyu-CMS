@@ -1,3 +1,13 @@
+<!--
+ * @Author: Liwenyu
+ * @Date: 2023-10-09 11:05:03
+ * @LastEditors: Liwenyu
+ * @LastEditTime: 2023-10-09 11:40:47
+ * @FilePath: \Liwenyu-CMS\src\views\main\system\department\department.vue
+ * @Description:
+ *
+ * Copyright (c) 2023 by Liwenyu, All Rights Reserved.
+-->
 <script setup lang="ts" name="department">
 import { computed } from 'vue'
 import PageSearch from '@/components/page-search/page-search.vue'
